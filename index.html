@@ -7,41 +7,27 @@
   <title>Document</title>
 
   <script>
-    //exercise to practice functions, guess a number between 0 and 10 in 3 tries
-    // generate a random number
-    // ask the user for a number
 
+    //f° isPremier(n) to determine if a number is or isn't.
+    // const premier = false
+    // test if the result is an integer Number.isInteger(result)
+    // if n <= 1 isPremier(n) returns false
+    // iterate on [2..n-1] {|x| Number.isInteger(n/x)? premier = true ; premier = false}
 
-
-    const generateGuess = () =>{
-      return Math.floor(Math.random() * 11)
-    }
-
-    const target = generateGuess()
-    console.log(target)
-
-    const guessNumber = () =>{
-      return prompt('guess a number between 0 and 10') * 1
-    }
-
-    const isRight = (n) => {
-      return n === target
-    }
-
-
-    const guess = () => {
-      for (let i=0; i< 3; i++) {
-        const num = guessNumber()
-        if (isRight(num)){
-          console.log("well done, you guessed right")
-          i= 2
-        } else {
-          console.log(`You failed, try again, only ${2-i} guess left`)
+    const isPremier = (n) => {
+      if (n <= 1 ) {
+        return false
+      } else if (n === 2 || n === "2") {
+        return true
+      }else {
+        const premier
+        for (let i = 3; i < n; i++) {
+          Number.isInteger(n/i)? premier = false ; premier = true
         }
       }
     }
 
-    guess()
+    console.log ([2..5])
   </script>
 </head>
 <body>
